@@ -1,0 +1,21 @@
+<div class="row mb-1">
+    <section [formGroup]="formGroup">
+        <div class="row mb-1">
+            <label class="col-sm-3 col-form-label">
+                {{ label }}
+                <!-- <span *ngIf="validator.required" class="text-danger">*</span> -->
+            </label>
+            <div class="col-sm-8">
+
+                <textarea class="form-control" [formControlName]="control" [required]="required"></textarea>
+
+                <div *ngIf="formGroup.controls[control].invalid && formGroup.controls[control].dirty">
+                    <div *ngIf="formGroup.controls[control].errors?.['required']"
+                        class="alert alert-danger ml-3 p-2 fadeInDown animated">
+                        This field is required
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>

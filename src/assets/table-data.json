@@ -1,0 +1,46 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "name": "John Smith",
+      "email": "john.smith@example.com",
+      "phone": "+1 (555) 123-4567"
+    },
+    {
+      "id": 2,
+      "name": "Jane Doe",
+      "email": "jane.doe@example.com",
+      "phone": "+1 (555) 987-6543"
+    },
+    {
+      "id": 3,
+      "name": "Bob Johnson",
+      "email": "bob.johnson@example.com",
+      "phone": "+1 (555) 555-1212"
+    },
+    {
+      "id": 4,
+      "name": "Alice Brown",
+      "email": "alice.brown@example.com",
+      "phone": "+1 (555) 555-1212"
+    }
+  ],
+  "columns": [
+    {
+      "label": "ID",
+      "key": "id"
+    },
+    {
+      "label": "Name",
+      "key": "name"
+    },
+    {
+      "label": "Email",
+      "key": "email"
+    },
+    {
+      "label": "Phone",
+      "key": "phone"
+    }
+  ]
+}

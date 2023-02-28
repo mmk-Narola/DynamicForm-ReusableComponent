@@ -1,0 +1,24 @@
+<div class="row mb-1">
+    <section [formGroup]="formGroup">
+        <div class="row mb-1">
+            <label class="col-sm-3 col-form-label">
+                {{ label | titlecase }}
+                <!-- <span *ngIf="validator.required" class="text-danger">*</span> -->
+            </label>
+            <div class="col-sm-8">
+                <select [name]="control" class="form-control" (change)="onSelectionChange($event, control)"
+                    [formControlName]="control">
+                    <option value="">Select Option</option>
+                    <option value="" *ngFor="let option of options" [value]="option._id">
+                        {{ option.name }}
+                    </option>
+                </select>
+                <div *ngIf="formGroup.controls[control].invalid && formGroup.controls[control].touched">
+                    <div *ngIf="formGroup.controls[control].errors?.['required']" class="text-danger">
+                        This field is required
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>

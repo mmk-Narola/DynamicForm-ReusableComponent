@@ -1,0 +1,151 @@
+{
+  "data": [
+    {
+      "name": "firstName",
+      "label": "First name:",
+      "value": "",
+      "type": "input",
+      "fieldType": "text",
+      "validators": {
+        "required": true,
+        "pattern": "^[a-zA-Z0-9]+$",
+        "maxLength": 10
+      }
+    },
+    {
+      "name": "lastName",
+      "label": "Last name:",
+      "value": "",
+      "type": "input",
+      "fieldType": "text",
+      "validators": {
+        "required": true,
+        "pattern": "^[a-zA-Z]+$",
+        "maxLength": 10
+      }
+    },
+    {
+      "name": "don",
+      "label": "DOB:",
+      "type": "input",
+      "fieldType": "date",
+      "validators": {
+        "required": true
+      }
+    },
+    {
+      "name": "age",
+      "label": "Age",
+      "value": "",
+      "type": "input",
+      "fieldType": "number",
+      "validators": {
+        "required": false,
+        "min": 1,
+        "max": 100
+      }
+    },
+    {
+      "name": "email",
+      "label": "Email:",
+      "value": "",
+      "type": "input",
+      "fieldType": "email",
+      "validators": {
+        "required": true,
+        "email": true
+      }
+    },
+    {
+      "name": "password",
+      "label": "Password:",
+      "type": "input",
+      "fieldType": "password",
+      "validators": {
+        "required": true,
+        "pattern": "^[a-zA-Z0-9]+$",
+        "minLength": 8
+      }
+    },
+    {
+      "name": "file",
+      "label": "File Upload:",
+      "type": "input",
+      "fieldType": "file",
+      "validators": {
+        "required": true
+      }
+    },
+    {
+      "name": "gender",
+      "label": "Gender:",
+      "value": "",
+      "type": "radio",
+      "validators": {},
+      "options": [
+        {
+          "_id": "1",
+          "name": "Male",
+          "sortname": "male"
+        },
+        {
+          "_id": "2",
+          "name": "Female",
+          "sortname": "female"
+        },
+        {
+          "_id": "3",
+          "name": "Other",
+          "sortname": "other"
+        }
+      ]
+    },
+    {
+      "name": "country",
+      "label": "Country:",
+      "value": "",
+      "type": "select",
+      "validators": {
+        "required": true
+      },
+      "options": []
+    },
+    {
+      "name": "state",
+      "label": "State:",
+      "value": "",
+      "type": "select",
+      "validators": {
+        "required": true
+      },
+      "options": []
+    },
+    {
+      "name": "city",
+      "label": "City:",
+      "value": "",
+      "type": "select",
+      "validators": {
+        "required": true
+      },
+      "options": []
+    },
+    {
+      "name": "comments",
+      "label": "Comments",
+      "value": "",
+      "type": "textarea",
+      "validators": {
+        "required": true
+      }
+    },
+    {
+      "name": "terms",
+      "value": "Terms and Condition",
+      "type": "checkbox",
+      "validators": {
+        "required": true
+      }
+    }
+  ]
+}

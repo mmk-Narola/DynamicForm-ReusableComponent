@@ -3,7 +3,8 @@
         <div class="row mb-1">
             <label class="col-sm-3 col-form-label">
                 {{ label | titlecase }}
-                <!-- <span *ngIf="validator.required" class="text-danger">*</span> -->
+                <!-- <span *ngIf="validator.required" class="text-danger">*</span>
+                <span *ngIf="required" class="text-danger">*</span> -->
             </label>
             <div class="col-sm-8">
                 <select [name]="control" class="form-control" (change)="onSelectionChange($event, control)"
@@ -13,11 +14,13 @@
                         {{ option.name }}
                     </option>
                 </select>
-                <div *ngIf="formGroup.controls[control].invalid && formGroup.controls[control].touched">
+
+                <div *ngIf="hasError" class="text-danger">{{ errorMessage }}</div>
+                <!-- <div *ngIf="formGroup.controls[control].invalid && formGroup.controls[control].touched">
                     <div *ngIf="formGroup.controls[control].errors?.['required']" class="text-danger">
                         This field is required
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
     </section>

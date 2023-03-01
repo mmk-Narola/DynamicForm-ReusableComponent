@@ -1,9 +1,12 @@
 export interface TableData {
   data: any[];
-  columns: TableColumn[];
+  // columns: TableColumn[];
 }
 
 export interface TableColumn {
-  label: string;
-  key: string;
+  label?: string;
+  key?: string;
+  _id?: string;
+  sortname?: string;
+  name?: string;
 }

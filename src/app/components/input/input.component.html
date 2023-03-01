@@ -3,12 +3,15 @@
         <div class="row mb-1">
             <label class="col-sm-3 col-form-label">
                 {{ label }}
-                <!-- <span *ngIf="validator.required" class="text-danger">*</span> -->
+                <!-- <span *ngIf="validator.required" class="text-danger">*</span>
+                <span *ngIf="required" class="text-danger">*</span> -->
             </label>
             <div class="col-sm-8">
                 <input [type]="type" class="form-control" [formControlName]="control" [required]="required" />
 
-                <div *ngIf="formGroup.controls[control].invalid && formGroup.controls[control].dirty">
+                <div *ngIf="hasError" class="text-danger">{{ errorMessage }}</div>
+
+                <!-- <div *ngIf=" formGroup.controls[control].invalid && formGroup.controls[control].dirty">
                     <div *ngIf="formGroup.controls[control].errors?.['required']"
                         class="alert alert-danger ml-3 p-2 fadeInDown animated">
                         This field is required
@@ -34,14 +37,16 @@
                     class="alert alert-danger ml-3 p-2 fadeInDown animated">
                     Accept Text or Number Only
                 </div>
+
                 <div *ngIf="formGroup.controls[control].errors?.['min']"
                     class="alert alert-danger ml-3 p-2 fadeInDown animated">
                     Age should be minimum 1 year
                 </div>
+
                 <div *ngIf="formGroup.controls[control].errors?.['max']"
                     class="alert alert-danger ml-3 p-2 fadeInDown animated">
                     Age should be maximun 100 year
-                </div>
+                </div> -->
             </div>
         </div>
     </section>

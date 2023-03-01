@@ -1,14 +1,10 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
 import { DynamicformReusablecomRoutingModule } from './dynamicform-reusablecom-routing.module';
-
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
   declarations: [],
-  imports: [
-    CommonModule,
-    DynamicformReusablecomRoutingModule
-  ]
+  imports: [CommonModule, DynamicformReusablecomRoutingModule, SharedModule],
 })
-export class DynamicformReusablecomModule { }
+export class DynamicformReusablecomModule {}

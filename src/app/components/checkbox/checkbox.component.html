@@ -2,15 +2,17 @@
     <section [formGroup]="formGroup">
         <div class="row mb-1">
             <div class="col-sm-6">
-                <input type="checkbox" class="form-check-input" [formControlName]="control" />&nbsp;
+                <input type="checkbox" class="form-check-input" [formControlName]="control"
+                    [required]="required" />&nbsp;
                 <label for="acceptTerms" class="form-check-label"> {{ label }} </label>
 
+                <div *ngIf="hasError" class="text-danger">{{ errorMessage }}</div>
             </div>
-            <div *ngIf="formGroup.controls[control].invalid && formGroup.controls[control].dirty">
+            <!-- <div *ngIf="formGroup.controls[control].invalid && formGroup.controls[control].dirty">
                 <div *ngIf="formGroup.controls[control].errors?.['required']" class="text-danger">
-                    Check box required True
+                    Please check box
                 </div>
-            </div>
+            </div> -->
         </div>
     </section>
 </div>

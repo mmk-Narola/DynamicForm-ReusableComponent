@@ -1,15 +1,13 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { TableData } from './constants/table-interface';
+import { TableData } from '../constants/table-interface';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss'],
+  selector: 'app-reusable-table-component',
+  templateUrl: './reusable-table-component.component.html',
+  styleUrls: ['./reusable-table-component.component.scss'],
 })
-export class AppComponent implements OnInit {
-  title = 'DynamicForm-ReusableComponent';
-
+export class ReusableTableComponentComponent implements OnInit {
   data: any[];
   columns = ['_id', 'sortname', 'name'];
 

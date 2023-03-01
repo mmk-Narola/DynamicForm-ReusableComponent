@@ -81,7 +81,9 @@
       "label": "Gender:",
       "value": "",
       "type": "radio",
-      "validators": {},
+      "validators": {
+        "required": true
+      },
       "options": [
         {
           "_id": "1",
@@ -143,6 +145,7 @@
       "name": "terms",
       "value": "Terms and Condition",
       "type": "checkbox",
+      "required": true,
       "validators": {
         "required": true
       }

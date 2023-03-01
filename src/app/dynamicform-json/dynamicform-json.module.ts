@@ -10,6 +10,7 @@ import { SelectoptionComponent } from '../components/selectoption/selectoption.c
 import { TableComponent } from '../components/table/table.component';
 import { TextareaComponent } from '../components/textarea/textarea.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     DynamicformJsonRoutingModule,
     ReactiveFormsModule,
     FormsModule,
+    SharedModule,
   ],
 })
 export class DynamicformJsonModule {}

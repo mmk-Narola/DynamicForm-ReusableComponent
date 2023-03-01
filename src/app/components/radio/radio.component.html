@@ -4,7 +4,8 @@
             <div class="radioBtn">
                 <label class="col-sm-3 col-form-label">
                     {{ label }}
-                    <!-- <span *ngIf="validator.required" class="text-danger">*</span> -->
+                    <!-- <span *ngIf="validator.required" class="text-danger">*</span>
+                    <span *ngIf="required" class="text-danger">*</span> -->
                 </label>
                 <!-- <label class="col-sm-2 col-form-label"> {{ label }}: </label> -->
 
@@ -14,11 +15,13 @@
                     {{ option.name }}&nbsp;
                 </div>
 
-                <div *ngIf="formGroup.controls[control].invalid && formGroup.controls[control].dirty">
+                <div *ngIf="hasError" class="text-danger">{{ errorMessage }}</div>
+
+                <!-- <div *ngIf="formGroup.controls[control].invalid && formGroup.controls[control].dirty">
                     <div *ngIf="formGroup.controls[control].errors?.['required']">
                         This radio button is required
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
     </section>

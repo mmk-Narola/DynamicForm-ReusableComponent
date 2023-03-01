@@ -14,7 +14,7 @@
                                     <div *ngSwitchCase="'input'">
                                         <app-input [type]="form_elem.fieldType" [label]="form_elem.label"
                                             [formGroup]="reusableComDyanicform" [control]="form_elem.name"
-                                            [required]="form_elem.required">
+                                            [validator]="form_elem.validations" [required]="form_elem.required">
                                         </app-input>
                                     </div>
                                     <div *ngSwitchCase="'radio'">
@@ -37,13 +37,21 @@
                                     </div>
                                     <div *ngSwitchCase="'checkbox'">
                                         <app-checkbox [label]="form_elem.value" [formGroup]="reusableComDyanicform"
-                                            [control]="form_elem.name">
+                                            [control]="form_elem.name" [required]="form_elem.required">
                                         </app-checkbox>
                                     </div>
                                 </div>
+
+                                <!-- <div *ngFor="let validation of  form_elem.validations">
+                                    <div *ngIf="reusableComDyanicform.get(form_elem.name)?.dirty && reusableComDyanicform.get(form_elem.name).hasError(validation.name)"
+                                        class="text-danger">
+                                        {{ validation.message }}
+                                    </div>
+                                </div> -->
                             </div>
-                            <div class="mt-4 pt-2">
-                                <input class="btn btn-primary" type="submit" value="Submit" />
+                            <div class=" mt-4 pt-2">
+                                <input class="btn btn-primary" [disabled]="reusableComDyanicform.invalid" type="submit"
+                                    value="Submit" />
                             </div>
                         </form>
                     </div>

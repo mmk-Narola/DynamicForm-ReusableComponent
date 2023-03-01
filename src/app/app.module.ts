@@ -13,18 +13,16 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { DynamicFormReusablecomComponent } from './dynamicform-reusablecom/dynamic-form-reusablecom/dynamic-form-reusablecom.component';
 import { DynamicFormJsonComponent } from './dynamicform-json/dynamic-form-json/dynamic-form-json.component';
+import { ReusableTableComponentComponent } from './reusable-table-component/reusable-table-component.component';
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    InputComponent,
-    CheckboxComponent,
-    SelectoptionComponent,
-    RadioComponent,
-    TextareaComponent,
     TableComponent,
     DynamicFormJsonComponent,
     DynamicFormReusablecomComponent,
+    ReusableTableComponentComponent,
   ],
   imports: [
     BrowserModule,
@@ -32,6 +30,7 @@ import { DynamicFormJsonComponent } from './dynamicform-json/dynamic-form-json/d
     ReactiveFormsModule,
     FormsModule,
     HttpClientModule,
+    SharedModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

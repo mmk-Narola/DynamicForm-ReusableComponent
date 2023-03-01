@@ -3,8 +3,8 @@ import { FormField } from '../app/constants/form-fields';
 
 export const formFieldData: FormField[] = [
   {
-    name: 'name',
-    label: 'Name',
+    name: 'firstname',
+    label: 'First Name',
     type: 'input',
     fieldType: 'text',
     required: true,
@@ -12,12 +12,41 @@ export const formFieldData: FormField[] = [
       {
         name: 'required',
         validator: Validators.required,
-        message: 'Name Required',
+        message: 'First Name Required',
       },
       {
         name: 'pattern',
         validator: Validators.pattern('^[a-zA-Z]+$'),
         message: 'Accept only Text',
+      },
+      {
+        name: 'minlength',
+        validator: Validators.minLength(2),
+        message: 'Mininum 2 character required ',
+      },
+    ],
+  },
+  {
+    name: 'lastname',
+    label: 'Last Name',
+    type: 'input',
+    fieldType: 'text',
+    required: true,
+    validations: [
+      {
+        name: 'required',
+        validator: Validators.required,
+        message: 'Last Name Required',
+      },
+      {
+        name: 'pattern',
+        validator: Validators.pattern('^[a-zA-Z]+$'),
+        message: 'Accept only Text',
+      },
+      {
+        name: 'minlength',
+        validator: Validators.minLength(2),
+        message: 'Mininum 2 character required ',
       },
     ],
   },
@@ -53,9 +82,14 @@ export const formFieldData: FormField[] = [
         message: 'Password Required',
       },
       {
+        name: 'pattern',
+        validator: Validators.pattern('^[a-zA-Z0-9]+$'),
+        message: 'Password Should be number and alphabet',
+      },
+      {
         name: 'minlength',
-        validator: Validators.minLength(3),
-        message: 'mininum length of password is 3',
+        validator: Validators.minLength(8),
+        message: 'Mininum length of password is 8',
       },
     ],
   },
@@ -193,12 +227,6 @@ export const formFieldData: FormField[] = [
     name: 'terms',
     type: 'checkbox',
     value: 'Accept Term and Conditon',
-    validations: [
-      {
-        name: 'required',
-        validator: Validators.required,
-        message: 'Accept Terms',
-      },
-    ],
+    required: true,
   },
 ];

@@ -37,7 +37,8 @@
                             </div>
 
                             <div *ngSwitchCase="'checkbox'">
-                                <app-checkbox [label]="field.value" [formGroup]="dynamicForm" [control]="field.name">
+                                <app-checkbox [label]="field.value" [formGroup]="dynamicForm" [control]="field.name"
+                                    [required]="field.validators.required">
                                 </app-checkbox>
                             </div>
                         </div>
@@ -59,7 +60,7 @@
                                 abc@gmail.com
                             </div> -->
                     </div>
-                    <button type="submit" [disabled]="dynamicForm.valid" class="btn btn-success">
+                    <button type="submit" [disabled]="dynamicForm.invalid" class="btn btn-dark">
                         Submit
                     </button>
                 </div>

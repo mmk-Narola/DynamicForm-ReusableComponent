@@ -1,1 +1,18 @@
-<p>table works!</p>
+<div class="page-content">
+    <div class="container mt-5">
+        <h3 class="text-center">Reusable Table Component with Backend API Data</h3>
+    </div>
+    <table class="table  table-bordered table-hover">
+        <thead class="text-center">
+            <tr>
+                <th scope="col" *ngFor="let column of columns">{{ column | titlecase }}</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let row of data" class="text-center">
+
+                <td *ngFor="let column of columns">{{ row[column] }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
